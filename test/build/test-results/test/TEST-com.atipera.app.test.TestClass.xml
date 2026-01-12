@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.atipera.app.test.TestClass" tests="2" skipped="0" failures="1" errors="0" timestamp="2026-01-12T15:25:16.710Z" hostname="PCANDRZEJ" time="3.873">
+  <properties/>
+  <testcase name="shouldReturn404WhenUserNotFound()" classname="com.atipera.app.test.TestClass" time="3.319">
+    <failure message="java.lang.AssertionError: Status expected:&lt;404&gt; but was:&lt;200&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;404&gt; but was:&lt;200&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:62)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:129)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$0(StatusResultMatchers.java:600)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:212)
+	at com.atipera.app.test.TestClass.shouldReturn404WhenUserNotFound(TestClass.java:32)
+</failure>
+  </testcase>
+  <testcase name="shouldReturnOkAndJsonArray()" classname="com.atipera.app.test.TestClass" time="0.552"/>
+  <system-out><![CDATA[16:25:12.494 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.atipera.app.test.TestClass]: TestClass does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:25:12.707 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.atipera.app.test.TestApplication for test class com.atipera.app.test.TestClass
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-01-12T16:25:13.308+01:00  INFO 13788 --- [test] [    Test worker] com.atipera.app.test.TestClass           : Starting TestClass using Java 25.0.1 with PID 13788 (started by andrz in C:\Users\andrz\OneDrive\Pulpit\test)
+2026-01-12T16:25:13.310+01:00  INFO 13788 --- [test] [    Test worker] com.atipera.app.test.TestClass           : No active profile set, falling back to 1 default profile: "default"
+2026-01-12T16:25:14.031+01:00  INFO 13788 --- [test] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-12T16:25:14.062+01:00  INFO 13788 --- [test] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2026-01-12T16:25:14.432+01:00  INFO 13788 --- [test] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-12T16:25:14.641+01:00  INFO 13788 --- [test] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:7828cb70-2857-48d5-9a79-43fc37515ea1 user=SA
+2026-01-12T16:25:14.644+01:00  INFO 13788 --- [test] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-12T16:25:14.691+01:00  INFO 13788 --- [test] [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-12T16:25:14.756+01:00  INFO 13788 --- [test] [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-12T16:25:15.313+01:00  INFO 13788 --- [test] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-12T16:25:15.392+01:00  INFO 13788 --- [test] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:7828cb70-2857-48d5-9a79-43fc37515ea1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 7828CB70-2857-48D5-9A79-43FC37515EA1/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-12T16:25:15.857+01:00  INFO 13788 --- [test] [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12T16:25:15.868+01:00  INFO 13788 --- [test] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-12T16:25:15.981+01:00  WARN 13788 --- [test] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12T16:25:16.635+01:00  INFO 13788 --- [test] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-01-12T16:25:16.636+01:00  INFO 13788 --- [test] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-01-12T16:25:16.641+01:00  INFO 13788 --- [test] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2026-01-12T16:25:16.690+01:00  INFO 13788 --- [test] [    Test worker] com.atipera.app.test.TestClass           : Started TestClass in 3.768 seconds (process running for 5.364)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /github/repos
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.atipera.app.test.RController
+           Method = com.atipera.app.test.RController#getRepos()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"repositoryName":"Hello-World","ownerLogin":"octocat","listOfBranches":[{"name":"master","lastCommitSha":"7fd1a60b01f91b314f59955a4e4d4e80d8edf11d"},{"name":"octocat-patch-1","lastCommitSha":"b1b3f9723831141a31a1a7252a213e216ea76e56"},{"name":"test","lastCommitSha":"b3cbd5bbd7e81436d2eee04537ea2b4c0cad4cdf"}]},{"repositoryName":"Spoon-Knife","ownerLogin":"octocat","listOfBranches":[{"name":"change-the-title","lastCommitSha":"f439fc5710cd87a4025247e8f75901cdadf5333d"},{"name":"main","lastCommitSha":"d0dd1f61b33d64e29d8bc1372a94ef6a2fee76a9"},{"name":"test-branch","lastCommitSha":"58060701b538587e8b4ab127253e6ed6fbdc53d1"}]},{"repositoryName":"git-consortium","ownerLogin":"octocat","listOfBranches":[{"name":"master","lastCommitSha":"b33a9c7c02ad93f621fa38f0e9fc9e867e12fa0e"}]},{"repositoryName":"hello-worId","ownerLogin":"octocat","listOfBranches":[{"name":"master","lastCommitSha":"7e068727fdb347b685b658d2981f8c85f7bf0585"}]},{"repositoryName":"octocat.github.io","ownerLogin":"octocat","listOfBranches":[{"name":"gh-pages","lastCommitSha":"c0e4a095428f36b81f0bd4239d353f71918cbef3"},{"name":"master","lastCommitSha":"3a9796cf19902af0f7e677391b340f1ae4128433"}]},{"repositoryName":"test-repo1","ownerLogin":"octocat","listOfBranches":[{"name":"gh-pages","lastCommitSha":"57523742631876181d95bc268e09fb3fd1a4d85e"}]}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\andrz\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.17.8\f09415827a71be7ed621c7bd02550678f28bc81c\byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

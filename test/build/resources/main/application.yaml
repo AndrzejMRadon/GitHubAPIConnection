@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: test
+github:
+  userName: octocat
+  api:
+      url: https://api.github.com
